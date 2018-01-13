@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Fansub Bypasser",
+  "version": "0.1",
+  "description" : "Simply scrap the target page and process the current link",
+
+  "browser_action": {
+    "default_icon": "ico.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+   	 "matches" : ["http://awsubs.co/*","file:///*","*://www.samehadaku.net/*"],
+   	 "js" : ["jquery-1.10.2.js","myscript.js"]
+   }
+  ],
+  "icons":{
+    "64" : "64-ico.png"
+  },
+  "permissions": [
+    "<all_urls>"
+   ]
+}
