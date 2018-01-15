@@ -14,7 +14,7 @@
 
   "content_scripts": [
     {
-     "matches" : ["http://awsubs.co/*","*://www.samehadaku.net/*"],
+     "matches" : ["http://awsubs.co/*/*","*://www.samehadaku.net/*/*"],
      "js" : ["jquery-1.10.2.min.js","content.js"]
    }
   ],
