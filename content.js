@@ -27,8 +27,9 @@ function init(){
 	var selector = ['div.download-eps', 'div.dl-item'];
 	var domain = document.domain;
 
-	links =  $(selector[0] + ' a').map( function() { return $(this).attr('href'); }).get();
-	element = document.querySelectorAll(selector[0] + " a[href]");
+	className = selector[list.indexOf(domain)];
+	links =  $(className + ' a').map( function() { return $(this).attr('href'); }).get();
+	element = document.querySelectorAll(className + " a[href]");
 
 	sendMsg(element, JSON.stringify({'urlArray' : links}));
 }
