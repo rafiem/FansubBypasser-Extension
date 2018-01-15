@@ -1,0 +1,10 @@
+#Instructions
+~ Open GChrome
+
+~ Redirect to chrome://extensions
+
+~ Check the Developer mode checklist
+
+~ Load unpacked extension => Choose the project folder
+
+~ Enjoy ^-^
