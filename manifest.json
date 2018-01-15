@@ -5,18 +5,25 @@
   "description" : "Simply scrap the target page and process the current link",
 
   "browser_action": {
-    "default_icon": "ico.png",
+    "default_icon": "ico16.png",
     "default_popup": "popup.html"
   },
+  "icons":{
+    "64" : "ico64.png"
+  },
+
   "content_scripts": [
     {
-   	 "matches" : ["http://awsubs.co/*","file:///*","*://www.samehadaku.net/*"],
-   	 "js" : ["jquery-1.10.2.min.js","myscript.js"]
+     "matches" : ["http://awsubs.co/*/*","*://www.samehadaku.net/*/*"],
+     "js" : ["jquery-1.10.2.min.js","content.js"]
    }
   ],
-  "icons":{
-    "64" : "64-ico.png"
+
+  "background": {
+    "scripts": ["jquery-1.10.2.min.js","background.js"],
+    "persistent": false
   },
+
   "permissions": [
     "<all_urls>"
    ]
