@@ -1,7 +1,8 @@
-# Fansub-Bypasser-Extension
+# Mafuyu-Fansub-Bypasser-Extension
 Simlpy overrides the short-link of current Fansub page 
 
 ** Formerly used to bypass samehadaku.net & awsubs.co short-link mechanism
+Mafuyu API : https://github.com/cacadosman/Mafuyu-Fansub-Bypasser-API
 
 # Usage
 1. git clone
