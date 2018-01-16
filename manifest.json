@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Fansub Bypasser",
+  "name": "Nyan Fansub Bypasser",
   "version": "0.1",
   "description" : "Simply scrap the target page and process the current link",
 
@@ -14,7 +14,7 @@
 
   "content_scripts": [
     {
-     "matches" : ["http://awsubs.co/*/*","*://www.samehadaku.net/*/*"],
+     "matches" : ["samehadaku.net\/[0-9]{1,}\/.*","awsubs.co\/(?!page).{1,}", "oploverz.id\/[0-9]{1,}\/.*", "animekompi.web.id\/(?!page).{1,}"],
      "js" : ["jquery-1.10.2.min.js","content.js"]
    }
   ],
