@@ -14,7 +14,7 @@
 
   "content_scripts": [
     {
-     "matches" : ["http://awsubs.co/*","*://www.samehadaku.net/*"],
+     "matches" : ["*://awsubs.co/*/*","*://www.samehadaku.net/*/*","*://www.oploverz.in/*","*://animekompi.web.id/*/*"],
      "js" : ["jquery-1.10.2.min.js","content.js"]
    }
   ],
@@ -28,3 +28,4 @@
     "<all_urls>"
    ]
 }
+
