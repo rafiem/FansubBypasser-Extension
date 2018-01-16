@@ -1,7 +1,7 @@
 # Nyan-Fansub-Bypasser-Extension
 Simlpy overrides the short-link of current Fansub page 
  
-** Formerly used to bypass samehadaku.net & awsubs.co short-link mechanism <br> <br>
+** Formerly used to bypass fansub short-link mechanism <br> <br>
 Supported Fansub : Samehadaku, Oploverz, AwSubs, Animekompi <br>
 Nyan API : https://github.com/cacadosman/Nyan-Fansub-Bypasser-API
 
