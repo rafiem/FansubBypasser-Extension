@@ -10,33 +10,27 @@ function destroyElement(selector){
 function clean(){
 	destroyElement('script');
 	destroyElement('img');
+	destroyElement('video');
 	destroyElement('iframe');
 }
 
-function sendMsg(el,e,json){
-	var resp;
-	chrome.runtime.sendMessage({opt: e, link: json}, function(response) {
-	   json = JSON.parse(response.cont);
-
-	   for (var i=0; i<el.length; i++)
-	   		el[i].href = json['parsedUrl'][i];
-
+function sendMsg(e, json){
+	chrome.runtime.sendMessage({link: json}, function(response) { 
+	   $(e +' a').map( function(i=0) { return $(this)
+	   		     .attr("href", response.cont['urlArray'][i]); });
+	   alert("Mafuyu sudah membypass semua link ^_^");
 	});
-
 }
 
 function init(){
-	var list = ['www.samehadaku.net','awsubs.co'];
-	var selector = ['div.download-eps', 'div.dl-item'];
+	var list = ['www.samehadaku.net','awsubs.co','animekompi.web.id','www.oploverz.in'];
+	var selector = ['div.download-eps', 'div.dl-item','','div.soraurl list-download'];
 	var domain = document.domain;
-	var className, opt, href;
 
 	className = selector[list.indexOf(domain)];
-	opt = list.indexOf(domain) + 1;
-	href =  $(className + ' a').map( function() { return $(this).attr('href'); }).get();
-	element = document.querySelectorAll(className + " a[href]");
-
-	sendMsg(element, opt, JSON.stringify({'urlArray' : href }));
+	links =  $(className + ' a').map( function() { return $(this).attr('href'); }).get();
+	sendMsg(className, JSON.stringify({'urlArray' : links}));
+	
 }
 
 clean();
