@@ -2,6 +2,7 @@ chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse){
 	 var f;
 	 // alert(request.link)
+	 // this is ajax post to managa background process
 	  $.ajax({
 		  'async': false,
 		  'type': "POST",
