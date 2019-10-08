@@ -18,7 +18,7 @@ function sendMsg(e, json){
 	chrome.runtime.sendMessage({link: json}, function(response) { 
 	   $(e +' a').map( function(i=0) { return $(this)
 	   		     .attr("href", response.cont['urlArray'][i]); });
-	   alert("Mafuyu sudah membypass semua link ^_^");
+	   alert("Mafuyu sudah membypass semua link :)))");
 	});
 }
 
